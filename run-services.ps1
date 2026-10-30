@@ -1,0 +1,7 @@
+Write-Host "Run these in six VS Code terminals:"
+Write-Host "cd eureka-server; mvn spring-boot:run"
+Write-Host "cd auth-service; mvn spring-boot:run"
+Write-Host "cd member-service; mvn spring-boot:run"
+Write-Host "cd subscription-service; mvn spring-boot:run"
+Write-Host "cd attendance-service; mvn spring-boot:run"
+Write-Host "cd api-gateway; mvn spring-boot:run"

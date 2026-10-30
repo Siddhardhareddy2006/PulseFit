@@ -1,0 +1,1 @@
+package com.pulsefit.attendanceservice.client; import org.springframework.cloud.openfeign.FeignClient; import org.springframework.web.bind.annotation.*; import java.util.Map; @FeignClient(name="member-service") public interface MemberClient { @GetMapping("/members/{id}/exists") Map<String,Object> exists(@PathVariable("id") Long id); }

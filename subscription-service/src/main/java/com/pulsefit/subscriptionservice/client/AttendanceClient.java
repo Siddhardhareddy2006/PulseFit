@@ -1,0 +1,1 @@
+package com.pulsefit.subscriptionservice.client; import org.springframework.cloud.openfeign.FeignClient; import org.springframework.web.bind.annotation.*; import java.util.Map; @FeignClient(name="attendance-service") public interface AttendanceClient { @PostMapping("/attendance/subscription-events/{id}") Map<String,Object> subscriptionEvent(@PathVariable("id") Long id); }

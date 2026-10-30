@@ -1,0 +1,1 @@
+package com.pulsefit.attendanceservice.entity; import jakarta.persistence.*; import java.time.LocalDateTime; @Entity public class Attendance { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; public Long memberId; public String facility; public LocalDateTime checkInTime; public LocalDateTime checkOutTime; public String status; public Attendance(){} }

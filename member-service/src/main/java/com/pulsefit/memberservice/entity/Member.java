@@ -1,0 +1,3 @@
+package com.pulsefit.memberservice.entity;
+import jakarta.persistence.*; import java.time.LocalDateTime;
+@Entity public class Member { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @Column(nullable=false) public String firstName; @Column(nullable=false) public String lastName; @Column(nullable=false,unique=true) public String email; public String phone; public String gender; public String dateOfBirth; public String facility; public String membershipStatus; public LocalDateTime createdAt; public LocalDateTime updatedAt; @PrePersist void pre(){createdAt=updatedAt=LocalDateTime.now(); if(membershipStatus==null)membershipStatus="ACTIVE";} @PreUpdate void upd(){updatedAt=LocalDateTime.now();} }

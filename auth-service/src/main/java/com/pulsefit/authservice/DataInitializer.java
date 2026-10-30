@@ -1,0 +1,3 @@
+package com.pulsefit.authservice;
+import com.pulsefit.authservice.entity.UserAccount; import com.pulsefit.authservice.repo.UserRepository; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder;
+@Configuration public class DataInitializer { @Bean CommandLineRunner seed(UserRepository r,PasswordEncoder e){return args->{if(r.count()==0){r.save(new UserAccount("admin",e.encode("admin123"),"ADMIN"));r.save(new UserAccount("staff",e.encode("staff123"),"STAFF"));r.save(new UserAccount("member",e.encode("member123"),"MEMBER"));}};} }

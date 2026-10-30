@@ -1,0 +1,1 @@
+package com.pulsefit.attendanceservice; import org.junit.jupiter.api.Test; import org.springframework.boot.test.context.SpringBootTest; @SpringBootTest(properties={"eureka.client.enabled=false"}) class AttendanceServiceApplicationTests { @Test void contextLoads(){} }

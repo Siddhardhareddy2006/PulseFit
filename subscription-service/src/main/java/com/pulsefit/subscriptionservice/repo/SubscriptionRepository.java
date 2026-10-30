@@ -1,0 +1,1 @@
+package com.pulsefit.subscriptionservice.repo; import com.pulsefit.subscriptionservice.entity.Subscription; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface SubscriptionRepository extends JpaRepository<Subscription,Long>{List<Subscription> findByMemberId(Long id);}

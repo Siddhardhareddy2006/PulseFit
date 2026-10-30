@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PulseFit: Start all services + frontend",
+      "type": "shell",
+      "command": "bash scripts/start-local.sh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "PulseFit: Stop all services",
+      "type": "shell",
+      "command": "bash scripts/stop-local.sh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "PulseFit: Build all modules",
+      "type": "shell",
+      "command": "mvn clean install -DskipTests",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "PulseFit: Start extra load-balancing instances",
+      "type": "shell",
+      "command": "bash scripts/start-extra-instances.sh",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "PulseFit: Open frontend",
+      "type": "shell",
+      "command": "open http://localhost:5500",
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ]
+}

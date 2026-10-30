@@ -1,0 +1,1 @@
+package com.pulsefit.subscriptionservice.repo; import com.pulsefit.subscriptionservice.entity.Plan; import org.springframework.data.jpa.repository.JpaRepository; public interface PlanRepository extends JpaRepository<Plan,Long>{}

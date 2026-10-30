@@ -1,0 +1,4 @@
+**/target/
+.run-logs/
+.DS_Store
+.vscode/*.log
